@@ -2,7 +2,7 @@ package com.electron.SolicitarDatos;
 
 import java.util.*;
 
-public class Datos {
+public class Electrodomesticos {
     private static Integer cantidadElectro;
     private static List<String> nombreElectro = new LinkedList<>();
     private static List<String> categoriaElectro = new LinkedList<>();
@@ -13,7 +13,7 @@ public class Datos {
     }
 
     public static void setCantidadElectro(Integer cantidadElectro) {
-        Datos.cantidadElectro = cantidadElectro;
+        Electrodomesticos.cantidadElectro = cantidadElectro;
     }
 
     public static List<String> getNombreElectro() {
@@ -21,7 +21,7 @@ public class Datos {
     }
 
     public static void setNombreElectro(List<String> nombreElectro) {
-        Datos.nombreElectro = nombreElectro;
+        Electrodomesticos.nombreElectro = nombreElectro;
     }
 
     public static List<String> getCategoriaElectro() {
@@ -29,7 +29,7 @@ public class Datos {
     }
 
     public static void setCategoriaElectro(List<String> categoriaElectro) {
-        Datos.categoriaElectro = categoriaElectro;
+        Electrodomesticos.categoriaElectro = categoriaElectro;
     }
 
     public static List<String> getPrecedenciaElectro() {
@@ -37,7 +37,7 @@ public class Datos {
     }
 
     public static void setPrecedenciaElectro(List<String> precedenciaElectro) {
-        Datos.precedenciaElectro = precedenciaElectro;
+        Electrodomesticos.precedenciaElectro = precedenciaElectro;
     }
 
     public static void solicitarDatos() {
@@ -54,7 +54,7 @@ public class Datos {
         }
 
         do {
-            System.out.println("Ingrese El Nombre Del Electrodoméstico(Licuadora, Tostadora, Televisor) #" + (i+1) + ": ");
+            System.out.println("Ingrese El Nombre Del Electrodoméstico(Televisor ó Nevera u Otro) #" + (i+1) + ": ");
             nombreElectro.add(teclado.next());
 
             System.out.println("Ingrese La Categoria Del Electrodoméstico(A ó B ó C) #" + (i+1) + ": ");

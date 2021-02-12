@@ -1,4 +1,19 @@
 package com.electron.clases;
 
-public class Nevera {
+import java.util.List;
+
+public class Nevera extends Electrodomestico {
+
+    public Nevera(List<String> nombre, Integer cantidad, List<String> categoriaConsumo, List<String> precedencia) {
+        super(nombre, cantidad, categoriaConsumo, precedencia);
+    }
+
+
+
+
+
+
+
+
+
 }

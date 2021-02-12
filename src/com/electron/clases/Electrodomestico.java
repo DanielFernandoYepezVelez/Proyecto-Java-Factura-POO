@@ -1,13 +1,12 @@
 package com.electron.clases;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class Electrodomestico {
     private Integer cantidad;
-    private List<String> nombre = new LinkedList<>();
-    private List<String> precedencia = new LinkedList<>();
-    private List<String> categoriaConsumo = new LinkedList<>();
+    private List<String> nombre;
+    private List<String> precedencia;
+    private List<String> categoriaConsumo;
 
     private Double precioPrecedencia;
     private Double precioCategoria;
