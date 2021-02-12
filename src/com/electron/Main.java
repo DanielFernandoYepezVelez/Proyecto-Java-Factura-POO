@@ -61,8 +61,7 @@ public class Main {
         List<String> nombreNV = new LinkedList<>();
         List<String> categoriaNV = new LinkedList<>();
         List<String> precedenciaNV = new LinkedList<>();
-        List<Integer> pantallaNV = new LinkedList<>();
-        List<String> tdtNV = new LinkedList<>();
+        List<Integer> capacidadNV  = new LinkedList<>();
 
         for (int i = 0; i < Electrodomesticos.getCantidadElectro(); i++) {
             String name = Electrodomesticos.getNombreElectro().get(i);
@@ -72,10 +71,13 @@ public class Main {
                 categoriaNV.add(Electrodomesticos.getCategoriaElectro().get(i));
                 precedenciaNV.add(Electrodomesticos.getPrecedenciaElectro().get(i));
                 cantidadNV += 1;
+
+                System.out.println("\nIngrese La Capacidad De La Nevera: ");
+                capacidadNV.add(teclado.nextInt());
             }
         }
 
-        nevera.add(new Nevera(nombreNV, cantidadNV, categoriaNV, precedenciaNV));
+        nevera.add(new Nevera(nombreNV, cantidadNV, categoriaNV, precedenciaNV, capacidadNV));
         /** ---------------------------------------------------------------------------------------- */
 
         /** Mostrando La Factura Final */
@@ -93,6 +95,10 @@ public class Main {
             tv.definirPrecioCategoria();
             tv.precioFinalTotalizado();
             System.out.println(tv.toString());
+        });
+
+        nevera.forEach(nv -> {;
+            System.out.println(nv.toString());
         });
         /** ---------------------------------------------------------------------------------------- */
     }
