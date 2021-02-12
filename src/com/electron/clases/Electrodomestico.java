@@ -23,16 +23,56 @@ public class Electrodomestico {
         return cantidad;
     }
 
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public List<String> getNombre() {
         return nombre;
+    }
+
+    public void setNombre(List<String> nombre) {
+        this.nombre = nombre;
     }
 
     public List<String> getPrecedencia() {
         return precedencia;
     }
 
+    public void setPrecedencia(List<String> precedencia) {
+        this.precedencia = precedencia;
+    }
+
     public List<String> getCategoriaConsumo() {
         return categoriaConsumo;
+    }
+
+    public void setCategoriaConsumo(List<String> categoriaConsumo) {
+        this.categoriaConsumo = categoriaConsumo;
+    }
+
+    public Double getPrecioPrecedencia() {
+        return precioPrecedencia;
+    }
+
+    public void setPrecioPrecedencia(Double precioPrecedencia) {
+        this.precioPrecedencia = precioPrecedencia;
+    }
+
+    public Double getPrecioCategoria() {
+        return precioCategoria;
+    }
+
+    public void setPrecioCategoria(Double precioCategoria) {
+        this.precioCategoria = precioCategoria;
+    }
+
+    public Double getPrecioTotalizado() {
+        return precioTotalizado;
+    }
+
+    public void setPrecioTotalizado(Double precioTotalizado) {
+        this.precioTotalizado = precioTotalizado;
     }
 
     public Double definirPrecioPrecedencia() {
@@ -82,14 +122,13 @@ public class Electrodomestico {
 
     @Override
     public String toString() {
-        return "TODOS Los Electrodomesticos {" +
-                "cantidad=" + cantidad +
-                ", nombre=" + nombre +
-                ", precedencia=" + precedencia +
-                ", categoriaConsumo=" + categoriaConsumo +
-                ", precioPrecedencia=" + precioPrecedencia +
-                ", precioCategoria=" + precioCategoria +
-                ", precioTotalizado=" + precioTotalizado +
-                '}';
+        return "********** TODOS Los Electrodomésticos **********" +
+                "\ncantidad = " + cantidad +
+                "\nnombres = " + nombre +
+                "\nprecedencias = " + precedencia +
+                "\ncategoriasConsumo = " + categoriaConsumo +
+                "\nprecioPrecedenciaTotal = " + precioPrecedencia +
+                "\nprecioCategoriaTotal = " + precioCategoria +
+                "\nprecioTotalizado = " + precioTotalizado;
     }
 }

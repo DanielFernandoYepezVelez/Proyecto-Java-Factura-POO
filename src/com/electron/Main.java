@@ -2,6 +2,7 @@ package com.electron;
 
 import com.electron.SolicitarDatos.Electrodomesticos;
 import com.electron.clases.Electrodomestico;
+import com.electron.clases.Nevera;
 import com.electron.clases.Televisor;
 
 import java.util.LinkedList;
@@ -54,18 +55,28 @@ public class Main {
         /** ---------------------------------------------------------------------------------------- */
 
         /** Total Neveras Existentes En Todos Los Electrodomésticos Ingresados */
+        List<Nevera> nevera = new LinkedList<>();
 
+        Integer cantidadNV = 0;
+        List<String> nombreNV = new LinkedList<>();
+        List<String> categoriaNV = new LinkedList<>();
+        List<String> precedenciaNV = new LinkedList<>();
+        List<Integer> pantallaNV = new LinkedList<>();
+        List<String> tdtNV = new LinkedList<>();
 
+        for (int i = 0; i < Electrodomesticos.getCantidadElectro(); i++) {
+            String name = Electrodomesticos.getNombreElectro().get(i);
 
+            if (name.startsWith("nev") || name.startsWith("NEV") || name.startsWith("neve") || name.startsWith("NEVE")) {
+                nombreNV.add(Electrodomesticos.getNombreElectro().get(i));
+                categoriaNV.add(Electrodomesticos.getCategoriaElectro().get(i));
+                precedenciaNV.add(Electrodomesticos.getPrecedenciaElectro().get(i));
+                cantidadNV += 1;
+            }
+        }
 
-
-
-
-
+        nevera.add(new Nevera(nombreNV, cantidadNV, categoriaNV, precedenciaNV));
         /** ---------------------------------------------------------------------------------------- */
-
-
-
 
         /** Mostrando La Factura Final */
         System.out.println("\n===================== FACTURA ELECTRODOMÉSTICOS ========================");
@@ -78,9 +89,9 @@ public class Main {
         });
 
         televisor.forEach(tv -> {
-            System.out.println(tv.definirPrecioPrecedencia());
-            System.out.println(tv.definirPrecioCategoria());
-            System.out.println(tv.precioFinalTotalizado());
+            tv.definirPrecioPrecedencia();
+            tv.definirPrecioCategoria();
+            tv.precioFinalTotalizado();
             System.out.println(tv.toString());
         });
         /** ---------------------------------------------------------------------------------------- */

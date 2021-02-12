@@ -18,8 +18,24 @@ public class Televisor extends Electrodomestico {
         return tamanio;
     }
 
+    public void setTamanio(List<Integer> tamanio) {
+        this.tamanio = tamanio;
+    }
+
     public List<String> getTdt() {
         return tdt;
+    }
+
+    public void setTdt(List<String> tdt) {
+        this.tdt = tdt;
+    }
+
+    public Double getPrecioTV() {
+        return precioTV;
+    }
+
+    public void setPrecioTV(Double precioTV) {
+        this.precioTV = precioTV;
     }
 
     @Override
@@ -95,10 +111,15 @@ public class Televisor extends Electrodomestico {
 
     @Override
     public String toString() {
-        return "Televisor {" +
-                "tamanio=" + tamanio +
-                ", tdt=" + tdt +
-                ", precioTV=" + precioTV +
-                '}';
+        return "\n********** TODOS Los Televisores **********" +
+                "\ncantidad = " + this.getCantidad() +
+                "\nnombres = " + this.getNombre() +
+                "\nTamaño = " + this.tamanio +
+                "\n¿Tiene TDT? = " + this.tdt +
+                "\nprecedencias = " + this.getPrecedencia() +
+                "\ncategoriasConsumo = " + this.getCategoriaConsumo() +
+                "\nprecioPrecedenciaTotal = " + this.definirPrecioPrecedencia() +
+                "\nprecioCategoriaTotal = " + this.definirPrecioCategoria() +
+                "\nprecioTotalizado = " + this.precioFinalTotalizado();
     }
 }
